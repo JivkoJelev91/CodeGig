@@ -64,7 +64,7 @@ class AddGig extends Component {
                   { 
                     this.state.errorHandler.map((error, key) => {
                       return  <div className="error" key={key}>
-                                <p style={{color:'red'}}>{error.text}</p>
+                                <p>{error.text}</p>
                               </div>
                     })
                   }
