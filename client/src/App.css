@@ -32,6 +32,14 @@ a:hover {
   color: var(--primary-color);
 }
 
+.link{
+  color:#000;
+}
+
+.link:hover{
+  color: var(--primary-color);
+}
+
 .container {
   max-width: 960px;
   padding: 1rem 4rem;
@@ -65,16 +73,17 @@ header nav li {
   margin: 0 1rem;
 }
 
-/* Login Button Spacing */
-/*header nav li:last-child {
-  margin-left: -5px;
-}*/
-
 header.inner {
   background: var(--bg-color);
   border-bottom: 4px solid var(--primary-color);
   position: relative;
   box-shadow: var(--box-shadow);
+}
+
+.codeTag{
+  font-weight: 800; 
+  font-size:1.2em;
+  padding: 0 .5em;
 }
 
 /* Buttons */
@@ -104,7 +113,7 @@ header.inner {
 /* Home Search */
 .search-wrap {
   background: url('./img/showcase.jpg') no-repeat center center fixed / cover;
-  height: 90.3vh;
+  height: 89.9vh;
   width: 100%;
   padding: 1.3rem 3rem;
   display: flex;

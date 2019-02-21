@@ -8,6 +8,7 @@ function Header() {
          <header className="inner">
               <h2>
               <Link to="/">
+                  <b className="codeTag">&lt;/&gt;</b>
                   <i className="fas fa-code"></i>CodeGig
               </Link>
                </h2>
