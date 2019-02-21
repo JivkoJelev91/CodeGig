@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {  Redirect } from 'react-router';
+import baseUrl from '../config/baseUrl';
 import axios from 'axios';
 
 class Home extends Component {
@@ -14,7 +15,7 @@ class Home extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        axios.get(`http://localhost:5432/search/?search=${this.state.value}`)
+        axios.get(baseUrl + `search/?search=${this.state.value}`)
          .then((response)=> {
             this.setState({
                 redirect: true,

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {  Redirect } from 'react-router';
+import baseUrl from '../config/baseUrl';
 import axios from 'axios';
 import '../App.css';
 
@@ -20,7 +21,7 @@ class AddGig extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     let { title, technologies, budget, description, contact_email } = this.state;
-    axios.post('http://localhost:5432/add', {
+    axios.post(baseUrl + 'add', {
       title: title, 
       technologies: technologies, 
       budget: budget,

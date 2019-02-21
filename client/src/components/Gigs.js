@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import baseUrl from '../config/baseUrl';
 import axios from 'axios';
 import '../App.css';
 
@@ -19,7 +20,7 @@ class Gigs extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:5432/')
+    axios.get(baseUrl)
          .then((response)=> {
              if(this.props.location.state !== undefined){
                 this.setState({
