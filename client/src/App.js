@@ -4,7 +4,6 @@ import Gigs from './components/Gigs';
 import AddGig from './components/AddGig';
 import Header from './components/Header';
 import Home from './components/Home';
-
 import './App.css';
 
 class App extends Component {

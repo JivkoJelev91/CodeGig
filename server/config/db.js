@@ -14,6 +14,4 @@ mongoose.connect(uri).then(
         }
   );
 
-
-
 module.exports = mongoose.connection

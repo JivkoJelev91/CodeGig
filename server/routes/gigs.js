@@ -1,6 +1,5 @@
-const express = require('express');
 const mongoose = require('mongoose');
-
+const errorHandler = require('../utils/errorHandler');
 const Gig = mongoose.model('Gig')
 
 module.exports = app => {
@@ -22,21 +21,10 @@ module.exports = app => {
             description,
             contact_email
         } = req.body;
-        let errors = [];
-
+        
         // Validate Fields
-        if(!title){
-            errors.push({ text: 'Please add a title'});
-        }
-        if(!technologies){
-            errors.push({ text: 'Please add some technologies'});
-        }
-        if(!description){
-            errors.push({ text: 'Please add a description'});
-        }
-        if(!contact_email){
-            errors.push({ text: 'Please add a contact_email'});
-        }
+        let errors = [];
+        errors = errorHandler(errors,req.body);
         
         // Check for erros
         if(errors.length > 0){
@@ -72,7 +60,6 @@ module.exports = app => {
         let search = req.query.search;
         Gig.find({}).where('technologies').regex(new RegExp(search, 'i'))
             .then((gig) => {
-                console.log(gig);
                 res.json({
                     gig: gig
                 });
