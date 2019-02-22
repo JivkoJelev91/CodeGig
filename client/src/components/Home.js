@@ -34,11 +34,19 @@ class Home extends Component {
             <div>
                 <section id="search" className="search-wrap">
                     <h1>Find A Coding Gig</h1>
-                    <form action="/search" method="GET" className="search-form" onSubmit={this.handleSubmit}>
+                    <form 
+                    action="/search" 
+                    method="GET" 
+                    className="search-form" 
+                    onSubmit={this.handleSubmit}
+                    >
                         <i className="fas fa-search"></i>
-                        <input type="search" name="search" 
+                        <input 
+                        type="search" 
+                        name="search" 
                         placeholder="Javascript, PHP, Rails, etc..."
-                        onChange={this.handleChange}/>
+                        onChange={this.handleChange}
+                        />
                         <input type="submit" value="Search"/>
                     </form>
                 </section>

@@ -9,14 +9,14 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-          <Router>
-            <div className="App">
-              <Header />
-                <Route exact path="/" component={Home} />
-                <Route path="/gigs" component={Gigs}  />
-                <Route path="/add" component={AddGig} />
-            </div>
-          </Router>
+      <Router>
+        <div className="App">
+          <Header />
+            <Route exact path="/" component={Home} />
+            <Route path="/gigs" component={Gigs}  />
+            <Route path="/add" component={AddGig} />
+        </div>
+      </Router>
     );
   }
 }

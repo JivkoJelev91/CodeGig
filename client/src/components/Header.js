@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-function Header() {
+const Header = () => {
   return (
     <div>
          <header className="inner">
@@ -24,7 +24,7 @@ function Header() {
                   </li>   
                 </ul>
               </nav>
-            </header>
+          </header>
     </div>
   )
 }

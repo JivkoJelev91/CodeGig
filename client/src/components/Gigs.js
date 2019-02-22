@@ -15,7 +15,7 @@ class Gigs extends Component {
         textAlign: 'center',
         padding: '1em 2em 0em 1em',
         fontSize: '2em',
-        color: '#000 !important',
+        color: '#000',
     };
   }
 
@@ -25,11 +25,11 @@ class Gigs extends Component {
              if(this.props.location.state !== undefined){
                 this.setState({
                     details:this.props.location.state.details
-                })
+                });
              }else{
                 this.setState({
                     details:response.data.gigs
-                })
+                });
              }  
          })
          .catch(err => console.log(err));
@@ -57,7 +57,7 @@ class Gigs extends Component {
                                             <span>{gig.technologies}</span>
                                         </small>
                                     </div>
-                                </div>;
+                                </div>
                     })}
                </section>
            </div>
@@ -67,7 +67,9 @@ class Gigs extends Component {
             <div>
                 <section id="gigs">
                     <h1 style={this.h1Style}>No gigs available!</h1>
-                    <h1 style={this.h1Style}><Link to="/" className="link">Try Again</Link></h1>
+                    <h1 style={this.h1Style}>
+                        <Link to="/" className="link">Try Again</Link>
+                    </h1>
                 </section>
             </div>
         )
