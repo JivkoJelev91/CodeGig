@@ -5,19 +5,10 @@ import axios from 'axios';
 import Gigs from './Gigs';
 import '../App.css';
 
-const styles = {
-    textAlign: 'center',
-    padding: '1em 2em 0em 1em',
-    fontSize: '2em',
-    color: '#000',
-};
-
 class GigsContainer extends Component {    
   constructor(props){
     super(props);
-    this.state = {
-        details: []
-    }
+    this.state = { details: [] };
   }
 
   componentDidMount(){
@@ -47,8 +38,8 @@ class GigsContainer extends Component {
         return(
             <div>
                 <section id="gigs">
-                    <h1 style={styles}>No gigs available!</h1>
-                    <h1 style={styles}>
+                    <h1 className="emptyGigs">No gigs available!</h1>
+                    <h1 className="emptyGigs">
                         <Link to="/" className="link">Try Again</Link>
                     </h1>
                 </section>

@@ -42,11 +42,7 @@ class AddGig extends Component {
     .catch((error) =>  console.log(error));
   }
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
+  handleChange = e => this.setState({[e.target.name]: e.target.value});
 
   render() {
     if (this.state.toGigs) {

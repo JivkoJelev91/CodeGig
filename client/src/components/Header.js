@@ -8,7 +8,7 @@ const Header = () => {
               <h2>
               <Link to="/">
                   <b className="codeTag">&lt;/&gt;</b>
-                  <i className="fas fa-code"></i>CodeGig
+                  <i className="fas fa-code"></i><b>CodeGig</b>
               </Link>
                </h2>
               <nav>

@@ -53,6 +53,11 @@ a:hover {
   margin-bottom: 15px;
 }
 
+.errorText{
+  color:red;
+  font-size: 1.3em;
+}
+
 /* Header */
 header {
   display: flex;
@@ -191,6 +196,14 @@ input[type='search'] {
 
 .gig .tech span {
   color: var(--primary-color);
+  margin: 0.5em;
+}
+
+.emptyGigs {
+  text-align: center;
+  padding: 1em 2em 0em 1em;
+  font-size: 2em;
+  color: #000;
 }
 
 /* Form */
