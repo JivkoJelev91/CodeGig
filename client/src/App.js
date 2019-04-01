@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Gigs from './components/Gigs'; 
+import GigsContainer from './components/GigsContainer'; 
 import AddGig from './components/AddGig';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
           <Header />
             <Route exact path="/" component={Home} />
-            <Route path="/gigs" component={Gigs}  />
+            <Route path="/gigs" component={GigsContainer}  />
             <Route path="/add" component={AddGig} />
         </div>
       </Router>

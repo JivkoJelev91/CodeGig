@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {  Redirect } from 'react-router';
+import { Redirect } from 'react-router';
+import Search from './Search';
 import baseUrl from '../config/baseUrl';
 import axios from 'axios';
 
@@ -32,24 +33,10 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <section id="search" className="search-wrap">
-                    <h1>Find A Coding Gig</h1>
-                    <form 
-                    action="/search" 
-                    method="GET" 
-                    className="search-form" 
-                    onSubmit={this.handleSubmit}
-                    >
-                        <i className="fas fa-search"></i>
-                        <input 
-                        type="search" 
-                        name="search" 
-                        placeholder="Javascript, PHP, Rails, etc..."
-                        onChange={this.handleChange}
-                        />
-                        <input type="submit" value="Search"/>
-                    </form>
-                </section>
+                <Search 
+                submit={this.handleSubmit}
+                change={this.handleChange}
+                />
                 <div>
                     {this.state.redirect ? 
                     <Redirect to={{
