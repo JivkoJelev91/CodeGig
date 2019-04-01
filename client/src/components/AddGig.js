@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {  Redirect } from 'react-router';
 import baseUrl from '../config/baseUrl';
+import ErrorHandler from './ErrorHandler';
 import axios from 'axios';
 import '../App.css';
 
@@ -57,13 +58,7 @@ class AddGig extends Component {
                   <div className="form-wrap">
                   <h1>Add A Gig</h1>
                   <p>Your contact email will be shared with registered users to apply to your gig</p>
-                  { 
-                    this.state.errorHandler.map((error, key) => {
-                      return  <div className="error" key={key}>
-                                <p style={{color:'red', fontSize: '1.3em'}}>{error.text}</p>
-                              </div>
-                    })
-                  }
+                  <ErrorHandler errors={this.state.errorHandler}/>
                   <form action="/add" method="POST" onSubmit={this.handleSubmit}>
                       <div className="input-group">
                         <label htmlFor="title">Gig Title</label>
